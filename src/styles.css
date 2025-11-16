@@ -1,0 +1,49 @@
+/* src/styles.css */
+
+/* 1. Tailwind Base Layer: Resets, typography, etc. */
+@tailwind base;
+
+/* 2. Tailwind Components Layer: Used for complex, component-level styles (less common) */
+@tailwind components;
+
+/* 3. Tailwind Utilities Layer: Loads classes like 'bg-white', 'p-4', 'flex', etc. */
+@tailwind utilities;
+
+/* ---------------------------------------------------- */
+/* Any custom global styles not covered by Tailwind go here */
+/* ---------------------------------------------------- */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f9fafb; 
+}
+
+/* Custom styles for elements that Tailwind doesn't handle natively, like form inputs */
+/* Your original form/auth styles are still needed for non-Tailwind elements */
+.add-property-form input[type="text"],
+.add-property-form input[type="number"],
+.add-property-form input[type="tel"],
+.add-property-form input[type="file"],
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid #d1d5db; 
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.add-property-form button[type="submit"]:disabled {
+    background-color: #9ca3af !important;
+    cursor: not-allowed;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
